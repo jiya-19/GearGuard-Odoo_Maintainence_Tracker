@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_gear_equipment,gear equipment,model_gear_equipment,base.group_user,1,1,1,1
+access_gear_team,gear maintenance team,model_gear_maintenance_team,base.group_user,1,1,1,1
+access_gear_request,gear maintenance request,model_gear_maintenance_request,base.group_user,1,1,1,1

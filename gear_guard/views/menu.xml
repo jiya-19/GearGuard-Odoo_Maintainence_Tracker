@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <menuitem id="gear_guard_root" name="GearGuard" sequence="10"/>
+
+    <menuitem id="gear_equipment_menu" name="Equipment"
+              parent="gear_guard_root" action="action_gear_equipment" sequence="10"/>
+
+    <menuitem id="gear_request_menu" name="Maintenance Requests"
+              parent="gear_guard_root" action="action_gear_maintenance_request" sequence="20"/>
+
+    <menuitem id="gear_team_menu" name="Maintenance Teams"
+              parent="gear_guard_root" action="action_gear_maintenance_team" sequence="30"/>
+</odoo>

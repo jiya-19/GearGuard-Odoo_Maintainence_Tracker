@@ -1,0 +1,78 @@
+<odoo>
+    <!-- Action -->
+    <record id="action_gear_maintenance_request" model="ir.actions.act_window">
+        <field name="name">Maintenance Requests</field>
+        <field name="res_model">gear.maintenance.request</field>
+        <field name="view_mode">kanban,calendar,list,form</field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_gear_request_form" model="ir.ui.view">
+        <field name="name">gear.maintenance.request.form</field>
+        <field name="model">gear.maintenance.request</field>
+        <field name="arch" type="xml">
+           <form string="Maintenance Request">
+                <header>
+                    <button name="action_assign" type="object" string="Assign"
+                            invisible="state != 'new'"/>
+                    <button name="action_start" type="object" string="Start"
+                            invisible="state != 'assigned'"/>
+                    <button name="action_done" type="object" string="Complete"
+                            invisible="state != 'in_progress'"/>
+                    <button name="action_scrap" type="object" string="Scrap"
+                            invisible="state == 'scrap'"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="equipment_id"/>
+                        <field name="scheduled_date"/>
+                        <field name="state"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Kanban View -->
+    <record id="view_gear_request_kanban" model="ir.ui.view">
+        <field name="name">gear.maintenance.request.kanban</field>
+        <field name="model">gear.maintenance.request</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <!-- Declare all fields used in template -->
+                <field name="name"/>
+                <field name="equipment_id"/>
+                <field name="state"/>
+                <field name="type"/>
+                <field name="is_overdue"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_card">
+                            <strong><field name="name"/></strong>
+                            <div>Equipment: <field name="equipment_id"/></div>
+                            <div>Status: <field name="state"/></div>
+                            <!-- Safe check for overdue -->
+                            <t t-if="record.is_overdue and record.is_overdue.value">
+                                <span class="badge badge-danger">Overdue</span>
+                            </t>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <!-- Calendar View -->
+    <record id="view_gear_request_calendar" model="ir.ui.view">
+        <field name="name">gear.maintenance.request.calendar</field>
+        <field name="model">gear.maintenance.request</field>
+        <field name="arch" type="xml">
+            <calendar string="Preventive Maintenance" date_start="scheduled_date" color="type">
+                <field name="name"/>
+                <field name="equipment_id"/>
+            </calendar>
+        </field>
+    </record>
+</odoo>
