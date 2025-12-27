@@ -8,7 +8,7 @@ The module supports both corrective (breakdown) and preventive (scheduled) maint
 
 🎯 Objective
 
-To develop a maintenance management system that allows a company to:
+To develop a maintanence management system that allows a company to:
 
 Track company assets (machines, vehicles, computers, etc.)
 
@@ -27,9 +27,9 @@ Key Features:
 
 Equipment tracking by:
 
-Department
+Employee Ownership 
 
-Employee ownership
+Department 
 
 Assignment of a Maintenance Team to each equipment
 
@@ -87,9 +87,9 @@ Equipment
 
 Maintenance Team
 
-Assigned Technician
-
 Scheduled Date
+
+Assigned Technician
 
 Duration (Hours Spent)
 
