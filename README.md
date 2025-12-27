@@ -151,4 +151,58 @@ Based on scheduled date
 
 Allows easy scheduling and planning
 
+🔹 Reports (Optional)
 
+Pivot / Graph views for:
+
+Requests per team
+
+Requests per equipment category
+
+⚙️ Automation & Smart Features
+
+Auto-fill maintenance team based on selected equipment
+
+Team-based technician assignment
+
+Smart button on equipment for related maintenance
+
+Scrap logic:
+
+Moving request to Scrap marks equipment unusable
+
+Logs activity for auditability
+
+🔐 Security & Access Control
+User Roles
+
+Technician (User):
+
+Can create, view, and update maintenance requests
+
+Cannot delete records
+
+Read-only access to equipment
+
+Manager:
+
+Full access to equipment, teams, and requests
+
+Can assign requests and scrap equipment
+
+Access rights are configured using Odoo Access Control Lists (ACLs) via the UI.
+
+🧪 Testing Scenarios
+
+Login as technician and manage assigned requests
+
+Login as manager and oversee all maintenance activity
+
+Verify calendar scheduling for preventive maintenance
+
+Confirm scrap logic updates equipment status
+
+🏁 Conclusion
+
+GearGuard delivers a structured, Odoo-native maintenance tracking solution that aligns with real-world asset management workflows.
+By combining automation, role-based access, and intuitive views, the module transforms basic maintenance tracking into a smart, scalable system.
