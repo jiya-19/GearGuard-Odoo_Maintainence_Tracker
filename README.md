@@ -151,25 +151,7 @@ Based on scheduled date
 
 Allows easy scheduling and planning
 
-🔹 Reports (Optional)
 
-Pivot / Graph views for:
-
-Requests per team
-
-Requests per equipment category
-
-⚙️ Automation & Smart Features
-
-Auto-fill maintenance team based on selected equipment
-
-Team-based technician assignment
-
-Smart button on equipment for related maintenance
-
-Scrap logic:
-
-Moving request to Scrap marks equipment unusable
 
 Logs activity for auditability
 
